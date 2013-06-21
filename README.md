@@ -1,4 +1,4 @@
-# [egy186.github.io](//egy186.github.io)
+﻿# [egy186.github.io](http://egy186.github.io)
 
 egy186のブログができるんですか？
 
@@ -12,4 +12,4 @@ egy186のブログができるんですか？
 
 ## 連絡先
 
-Twitter [@egp186](//twitter.com/egp186)
+Twitter [@egp186](http://twitter.com/egp186)
