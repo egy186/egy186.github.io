@@ -1,4 +1,4 @@
-# egy186.github.io
+# [egy186.github.io](//egy186.github.io)
 
 egy186のブログができるんですか？
 

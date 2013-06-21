@@ -1,1 +1,24 @@
-﻿blog egy186
+---
+layout: default
+title: egy186's Blog
+---
+{% assign page = site.posts.first %}
+<article class="page-body">
+    <header>
+        <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
+        <p><time datetime="{{ page.date | date: "%Y-%m-%d T %H:%M %z" }}">{{ page.date | date_to_string }}</time></p>
+    </header>
+    {{ page.content }}
+    <footer>
+        <p>Category: {{ page.category }}</p>
+        <p>Tags: {{ page.tag }}</p>
+    </footer>
+</article>
+<section class="page-body">
+<h1>Other Posts</h1>
+    <ul class="posts">
+        {% for post in site.posts limit:5 offset:1 %}
+        <li><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</section>

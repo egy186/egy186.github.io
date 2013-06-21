@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="page-body">
+    <header>
+        <h1>{{ page.title }}</h1>
+        <p><time datetime="{{ page.date | date: "%Y-%m-%d T %H:%M %z" }}">{{ page.date | date_to_string }}</time></p>
+    </header>
+    {{ content }}
+    <footer>
+        <p>Category: {{ page.category }}</p>
+        <p>Tags: {{ page.tag }}</p>
+    </footer>
+</article>
