@@ -12,6 +12,7 @@ html, body, header, hgroup, nav, footer, article, aside, section, div, p, img, t
 
 p {
     margin: 1em 0;
+    font-size: 20px;
 }
 
 ul, ol {
@@ -28,11 +29,16 @@ ul, ol {
     width: 0;
 }
 
+html {
+    text-align: left;
+}
+
 body {
-    background: #F3F3F3;
+    background: #f3f3f3;
     color: #222;
     font: 16px Helvetica, Arial, Meiryo, "Hiragino Maru Gothic ProN", "MS PGothic", Osaka, sans-serif;
-    text-align: left;
+    text-align: justify;
+    text-justify : inter-ideograph;
 }
 
 #page-head, #page-foot {
@@ -64,6 +70,7 @@ body {
     font-size: 36px;
     margin: 0;
     padding: 0;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
 }
 
 #page-head h1 a {
@@ -73,7 +80,39 @@ body {
 
 .page-body {
     width: 875px;
-    margin: 0 auto;
+    margin: 50px auto;
+}
+
+.page-body a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.page-body a:hover {
+    color: #ff6d00;
+}
+
+.page-body h1 {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .2);
+    margin: 0;
+    padding: 0;
+    font-size: 32px;
+}
+
+.article h1 {
+    font-size: 64px;
+}
+
+.article time {
+    opacity: .7;
+}
+
+.page-body h1 a {
+    text-decoration: none;
+}
+
+.page-body h1 a:hover {
+    text-decoration: underline;
 }
 
 #page-foot h1 {
@@ -102,6 +141,10 @@ body {
     width: 375px;
 }
 
+#contact p {
+    font-size: 16px;
+}
+
 #tweets {
     float: left;
     width: 480px;
@@ -113,7 +156,7 @@ body {
 }
 
 @media (max-width: 900px) {
-    #page-head div, #page-foot div, body > div, #page-foot > p {
+    #page-head div, #page-foot div, .page-body, #page-foot > p {
         width: auto;
         padding-right: 20px;
         padding-left: 20px; 
@@ -160,10 +203,6 @@ table {
 }
 
 /*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
 /*ul.posts {
   list-style-type: none;
   margin-bottom: 2em;
@@ -180,11 +219,6 @@ ul.posts span {
 }
 
 /*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-
 /*.site {
   font-size: 115%;
   text-align: justify;
@@ -252,11 +286,6 @@ ul.posts span {
 }
 
 /*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-
 /* standard
 .post pre {
   border: 1px solid #ddd;
