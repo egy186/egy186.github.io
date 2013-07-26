@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+header, hgroup, nav, footer, article, aside, section {
+    display: block;
+}
+
+html, body, header, hgroup, nav, footer, article, aside, section, div, p, img, table, caption, tbody, tfoot, thead, tr, th, td {
+    background: none repeat scroll 0% 0% transparent;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+    a:hover {
+        color: #ff6d00;
+        text-decoration: none;
+        background: radial-gradient(closest-side, rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
+    }
+
+body {
+    text-align: left;
+    background: #f3f3f3;
+    color: #222;
+}
+
+#page {
+    width: 1000px;
+    margin: 0 auto;
+    font: 16px Helvetica, Arial, Meiryo, "Hiragino Maru Gothic ProN", "MS PGothic", Osaka, sans-serif;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    position: relative;
+}
+
+#changeBgColor {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    z-index: 100;
+}
+
+    #changeBgColor h2 {
+    }
+
+#page-head {
+    background: #333;
+    color: #fafafa;
+    display: inline-block;
+    margin: -1px auto 0 -30px;
+    padding: 20px 30px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: .8;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .5);
+    border: 1px solid rgba(0, 0, 0, .5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+    #page-head h1 {
+        font-size: 36px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #page-head p {
+        margin: 1em 0 0;
+        font-size: 18px;
+    }
+
+#page-body {
+    margin: 20px -20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .5);
+    border: 1px solid rgba(0, 0, 0, .5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    background: #000;
+    color: #fafafa;
+    padding: 20px;
+}
+
+.codeBox {
+}
+
+    .codeBox h2 {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .codeBox p {
+        margin: 1em 0;
+    }
+
+#page-foot {
+    background: #333;
+    color: #fafafa;
+    padding: 20px 30px;
+    margin: 0 -30px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, .5);
+    border-top: 1px solid rgba(0, 0, 0, .5);
+    border-right: 1px solid rgba(0, 0, 0, .5);
+    border-left: 1px solid rgba(0, 0, 0, .5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+    #page-foot small {
+        font-size: 14px;
+    }
+
+#nav {
+    float: left;
+    margin: 0 0 1em;
+}
+
+#verInf {
+    float: right;
+    color: #999;
+    font-size: 14px;
+}

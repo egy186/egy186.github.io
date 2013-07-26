@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8" />
+    <title>Color Converter | egy186.github.io</title>
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Titillium+Web:700,300" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+<body>
+    <div id="page">
+        <header id="page-head">
+            <h1>Color Converter</h1>
+            <p>Convert colorcode easily.</p>
+        </header>
+        <div id="page-body">
+            <section id="RGB" class="codeBox">
+                <h2>RGB</h2>
+                <form id="RGBform">
+                    <p><label>RGB<br /><input type="text" name="RGB" size="42" maxlength="40" /></label></p>
+                    <section>
+                        <h3>Slider</h3><!--onchange="main(this.value);function main(val){document.getElementById('RGBform').numR.value = val;}"-->
+                        <p><label>R<br /><input  type="range" name="rangeR" value="0" min="0" max="255" step="1" /><input type="number" name="numR" value="0" min="0" max="255" step="1" /></label></p>
+                        <p><label>G<br /><input type="range" name="rangeG" value="0" min="0" max="255" step="1" /><input type="number" name="numG" value="0" min="0" max="255" step="1" /></label></p>
+                        <p><label>B<br /><input type="range" name="rangeB" value="0" min="0" max="255" step="1" /><input type="number" name="numB" value="0" min="0" max="255" step="1" /></label></p>
+                    </section>
+                    <section>
+                        <h3>Picker</h3>
+                    </section>
+                    <section>
+                        <h3>Results</h3>
+                        <p><label>RGBa<br /><input type="text" name="RGBa" readonly="readonly" size="42" maxlength="40" /></label></p>
+                        <p><label>HSL<br /><input type="text" name="HSL" readonly="readonly" size="42" maxlength="40" /></label></p>
+                        <p><label>HSLa<br /><input type="text" name="HSLa" readonly="readonly" size="42" maxlength="40" /></label></p>
+                        <p><label>Hex<br /><input type="text" name="Hex" readonly="readonly" size="42" maxlength="40" /></label></p>
+                    </section>
+                </form>
+            </section>
+<!--            <section id="RGBa" class="codeBox">
+                <h2>RGBa</h2>
+            </section>
+            <section id="HSL" class="codeBox">
+                <h2>HSL</h2>
+            </section>
+            <section id="HSLa" class="codeBox">
+                <h2>HSLa</h2>
+            </section>
+            <section id="Hex" class="codeBox">
+                <h2>Hex</h2>
+            </section>-->
+        </div>
+        <section id="changeBgColor">
+            <h2>Change background color</h2>
+        </section>
+        <footer id="page-foot">
+            <div class="clearfix">
+                <p id="nav"><a href="//github.com/egy186/colorConverter/">about</a></p>
+                <p id="verInf">Version 0.0.0 alpha</p>
+            </div>
+            <p id="copy"><small>Copyrights (c) 2013 egy186 All Rights Reserved.</small></p>
+        </footer>
+    </div>
+    <script src="colorConvert.js"></script>
+</body>
+</html>
+
