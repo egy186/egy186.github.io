@@ -21,7 +21,7 @@
     var focusdForm = document.getElementById('RGBform');
     window.onload = function () {
         //var defcolor = 'rgb(51,51,51)';
-        var defcolor = 'rgb(' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ',' + Math.floor(Math.random() * 256) + ')';
+        var defcolor = 'rgb(' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ')';
         text_setValue(defcolor);
         focusdForm.RGB.value = defcolor;
     }
@@ -133,8 +133,8 @@
             focusdForm.RGB.value = 'rgb(' + rgb[0] + ', ' + rgb[1] + ', ' + rgb[2] + ')';
         }
         focusdForm.RGBa.value = 'rgba(' + rgb[0] + ', ' + rgb[1] + ', ' + rgb[2] + ', 1)';
-        focusdForm.HSL.value = 'rgba(' + hsl[0] + ', ' + hsl[1] + ', ' + hsl[2] + ')';
-        focusdForm.HSLa.value = 'rba(' + hsl[0] + ', ' + hsl[1] + ', ' + hsl[2] + ', 1)';
+        focusdForm.HSL.value = 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)';
+        focusdForm.HSLa.value = 'hsla(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%, 1)';
         focusdForm.Hex.value = hex;
         var ApStElem = document.getElementById('page-body').style;
         ApStElem.backgroundColor = 'rgb(' + rgb[0] + ', ' + rgb[1] + ', ' + rgb[2] + ')';

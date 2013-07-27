@@ -41,7 +41,7 @@ body {
 #page {
     width: 1000px;
     margin: 0 auto;
-    font: 16px Helvetica, Arial, Meiryo, "Hiragino Maru Gothic ProN", "MS PGothic", Osaka, sans-serif;
+    font: 18px Helvetica, Arial, Meiryo, "Hiragino Maru Gothic ProN", "MS PGothic", Osaka, sans-serif;
     text-align: justify;
     text-justify: inter-ideograph;
     position: relative;
@@ -90,9 +90,35 @@ body {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, .5);
     border: 1px solid rgba(0, 0, 0, .5);
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    background: #000;
-    color: #fafafa;
     padding: 20px;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label{
+    font-family: 'Lucida Console', monospace;
+}
+
+input[type='number'], input[type='text'] {
+    height: 1.2em;
+    padding: 2px 4px;
+    font-size: 18px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 2px;
+}
+
+input[type='number']:focus, input[type='text']:focus {
+    border-color: rgba(0, 51, 255, .5);
+    box-shadow: 0px 0px 4px rgba(0, 51, 255, .5) inset;
+    background: #fafaff;
+}
+
+input[type='range'] {
+    margin: 1em 0;
+    width: 100%;
 }
 
 .codeBox {
@@ -100,12 +126,53 @@ body {
 
     .codeBox h2 {
         margin: 0;
-        font-size: 24px;
+        font-size: 26px;
+    }
+
+    .codeBox h3 {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .codeBox section:first-child fieldset:last-child {/*pref*/
+        display: none;
+    }
+
+    .codeBox section {
+        margin: 1em 0;
     }
 
     .codeBox p {
         margin: 1em 0;
     }
+
+.codeBox fieldset {
+    margin: 4px 0;
+    border-radius: 8px;
+    padding: 10px ;
+}
+
+.codeBox fieldset p {
+    display: inline-block;
+    padding: 2px 2.5%;
+    width: 28.3%;
+}
+
+.enter fieldset p:nth-child(2)  {
+    color: #f00;
+    background: inherit;
+    /*background: linear-gradient(to right, #000, #f00);*/
+}
+
+.enter fieldset p:nth-child(3) {
+    color: #0f0;
+    background: inherit;
+}
+
+.enter fieldset p:last-child {
+    color: #00f;
+    background: inherit;
+}
 
 #page-foot {
     background: #333;

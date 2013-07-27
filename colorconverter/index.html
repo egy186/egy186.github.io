@@ -20,22 +20,23 @@
             <section id="RGB" class="codeBox">
                 <h2>RGB</h2>
                 <form id="RGBform">
-                    <p><label>RGB<br /><input type="text" name="RGB" size="42" maxlength="40" /></label></p>
-                    <section>
-                        <h3>Slider</h3><!--onchange="main(this.value);function main(val){document.getElementById('RGBform').numR.value = val;}"-->
-                        <p><label>R<br /><input  type="range" name="rangeR" value="0" min="0" max="255" step="1" /><input type="number" name="numR" value="0" min="0" max="255" step="1" /></label></p>
-                        <p><label>G<br /><input type="range" name="rangeG" value="0" min="0" max="255" step="1" /><input type="number" name="numG" value="0" min="0" max="255" step="1" /></label></p>
-                        <p><label>B<br /><input type="range" name="rangeB" value="0" min="0" max="255" step="1" /><input type="number" name="numB" value="0" min="0" max="255" step="1" /></label></p>
+                    <section class="enter">
+                        <h3>Enter</h3>
+                        <p><label>RGB: <input type="text" name="RGB" size="42" maxlength="40" tabindex="101" /></label></p>
+                        <fieldset>
+                            <legend>Slider</legend>
+                            <p><label>R: </span:><input type="number" name="numR" value="0" min="0" max="255" step="1" tabindex="111" /><br /><input  type="range" name="rangeR" value="0" min="0" max="255" step="1" tabindex="121" /></label></p><p><label>G: <input type="number" name="numG" value="0" min="0" max="255" step="1" tabindex="112" /><br /><input type="range" name="rangeG" value="0" min="0" max="255" step="1" tabindex="122" /></label></p><p><label>B: <input type="number" name="numB" value="0" min="0" max="255" step="1" tabindex="113" /><br /><input type="range" name="rangeB" value="0" min="0" max="255" step="1" tabindex="123" /></label></p>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Picker</legend>
+                        </fieldset>
                     </section>
-                    <section>
-                        <h3>Picker</h3>
-                    </section>
-                    <section>
+                    <section class="result">
                         <h3>Results</h3>
-                        <p><label>RGBa<br /><input type="text" name="RGBa" readonly="readonly" size="42" maxlength="40" /></label></p>
-                        <p><label>HSL<br /><input type="text" name="HSL" readonly="readonly" size="42" maxlength="40" /></label></p>
-                        <p><label>HSLa<br /><input type="text" name="HSLa" readonly="readonly" size="42" maxlength="40" /></label></p>
-                        <p><label>Hex<br /><input type="text" name="Hex" readonly="readonly" size="42" maxlength="40" /></label></p>
+                        <p><label>HSL: <input type="text" name="HSL" readonly="readonly" tabindex="131" /></label></p>
+                        <p><label>Hex: <input type="text" name="Hex" readonly="readonly" tabindex="132" /></label></p>
+                        <p><label>RGBa: <input type="text" name="RGBa" readonly="readonly" tabindex="133" /></label></p>
+                        <p><label>HSLa: <input type="text" name="HSLa" readonly="readonly" tabindex="134" /></label></p>
                     </section>
                 </form>
             </section>
@@ -57,7 +58,7 @@
         </section>
         <footer id="page-foot">
             <div class="clearfix">
-                <p id="nav"><a href="//github.com/egy186/colorConverter/">about</a></p>
+                <p id="nav"><a href="//github.com/egy186/colorConverter/#readme">about</a></p>
                 <p id="verInf">Version 0.0.0 alpha</p>
             </div>
             <p id="copy"><small>Copyrights (c) 2013 egy186 All Rights Reserved.</small></p>
@@ -73,6 +74,6 @@
         ga('create', '{{ site.ga_tracking_id }}', '{{ site.author }}.github.io');
         ga('send', 'pageview');
     </script>
-    </body>
+</body>
 </html>
 
