@@ -6,11 +6,12 @@
  * github.com/egy186/colorConverter
  */
 
-header, nav, footer, article, aside, section {
+/* #region Reset */
+header, nav, footer, article, aside, section, main {
     display: block;
 }
 
-html, body, header, nav, footer, article, aside, section, div, p, ul, li, img, table, caption, tbody, tfoot, thead, tr, th, td {
+html, body, header, nav, footer, article, aside, section, main, div, p, ul, li, img, table, caption, tbody, tfoot, thead, tr, th, td {
     background: none repeat scroll 0% 0% transparent;
     border: 0;
     font-size: 100%;
@@ -27,18 +28,11 @@ html, body, header, nav, footer, article, aside, section, div, p, ul, li, img, t
     width: 0;
 }
 
-/*form, fieldset, legend, label, input, button, select, textarea {
-}*/
-
 fieldset {
-    margin: 0;
     border-radius: 8px;
+    margin: 0;
     padding: 10px;
 }
-
-    fieldset[disabled] {
-        opacity: .6;
-    }
 
 legend {
     display: none;
@@ -46,56 +40,56 @@ legend {
 
 input {
     font-family: Consolas, monospace;
+    font-size: 18px;
+    margin: 0 .5em;
+    transition: all .4s ease;
 }
 
-    input[type='number'], input[type='text'] {
+    input[type='number'], input[type='text'], input[type='url'] {
         border: 4px solid #808080;
         border-radius: 2px;
-        font-size: 18px;
         height: 1.3em;
+        max-width: 400px;
         padding: 2px 4px;
     }
 
-        input[type='number']:focus, input[type='text']:focus {
+        input[type='number']:focus, input[type='text']:focus, input[type='url']:focus {
             background: #fafaff;
-            border-color: #79f;
-            box-shadow: 0px 0px 4px #79f inset;
+            border-color: hsl(225, 100%, 73%);
+            box-shadow: 0px 0px 4px hsl(225, 100%, 73%) inset;
         }
 
-        input[type='number']:invalid, input[type='text']:invalid {
+        input[type='number']:invalid, input[type='text']:invalid, input[type='url']:invalid {
             background: #fffafa;
-            border-color: #f97;
-            box-shadow: 0px 0px 4px #f97 inset;
+            border-color: hsl(15, 100%, 73%);
+            box-shadow: 0px 0px 4px hsl(15, 100%, 73%) inset;
         }
-
-/*label {
-    font-size: inherit;
-}*/
-
-/*input[type='checkbox'], input[type='radio'] {
-}
-*/
-
-/*input[type='range'] {
-    margin: 1em 0;
-}*/
 
 body {
     background: #f3f3f3;
     color: #222;
     text-align: left;
 }
+/* #endregion */
 
 #page {
+    background-image: url(alphaback16.png);
     font: 18px Helvetica, Arial, Meiryo, "Hiragino Maru Gothic ProN", "MS PGothic", Osaka, sans-serif;
     margin: 0 auto;
-    position: relative;
     text-align: justify;
     text-justify: inter-ideograph;
-    max-width: 1000px;
 }
 
 #page-head {
+    font-family: 'Titillium Web', Arial, Meiryo, "Hiragino Maru Gothic ProN", "MS PGothic", Osaka, sans-serif;
+    line-height: .8;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 0;
+}
+/* #region page-head */
+#page-head-inner {
+    display: inline-block;
     background: #333;
     border-bottom: 1px solid rgba(0, 0, 0, .5);
     border-left: 1px solid rgba(0, 0, 0, .5);
@@ -104,89 +98,116 @@ body {
     border-bottom-left-radius: 12px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, .5);
     color: #fafafa;
-    display: inline-block;
-    font-family: 'Titillium Web', Arial, Meiryo, "Hiragino Maru Gothic ProN", "MS PGothic", Osaka, sans-serif;
-    line-height: .8;
-    margin: 0 auto 0 0;
-    padding: 20px;
+    padding: 12px 20px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: all .4s ease;
 }
 
-    #page-head a {
-        color: inherit;
-        text-decoration: underline;
-    }
-
-        #page-head a:hover, #page-head a:focus {
-            color: #ff6d00;
-            background: radial-gradient(closest-side, rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
-            text-decoration: none;
-        }
-
-    #page-head h1 {
-        font-size: 36px;
-        margin: 0;
-        padding: 0;
-    }
-
-        #page-head h1 a {
-            text-decoration: none;
-        }
-
-    #page-head p {
-        margin: 1em 0 0;
-    }
-
-#page-body {
-    margin: 20px 0;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, .5);
-    border: 1px solid #666;
-    border-radius: 12px;
-    background-image: url(alphaback16.png);
-}
-/* page-body-inner */
-#layer-bgcolor {
-    border-radius: 11px;
+#page-head a {
+    color: inherit;
+    text-decoration: underline;
+    transition: all .4s ease;
 }
 
+    #page-head a:hover, #page-head a:focus {
+        color: hsl(25, 100%, 50%);
+        background: radial-gradient(closest-side, hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, 0));
+        text-decoration: none;
+    }
+
+    #page-head a:active {
+        color: hsl(25, 100%, 50%);
+        background: radial-gradient(closest-side, hsla(25, 100%, 75%, .2), hsla(0, 0%, 100%, 0));
+        text-decoration: none;
+    }
+
+#page-head h1 {
+    display: table-cell;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+}
+
+    #page-head h1 a {
+        text-decoration: none;
+    }
+
+#page-head h2 {
+    display: none;
+}
+
+#page-head p {
+    display: none;
+    /*display: inline;
+    margin: 1em 0 0;*/
+}
+/* #endregion */
+/* #region page-head-nav */
 #nav-tab {
-    padding: 1.8% 0;
+    display: table-cell;
+    padding: 0 0 0 1em;
 }
 
     #nav-tab ul {
-        margin: 0 1%;
+        background: hsl(0, 0%, 20%);
+        box-shadow: 0 0 16px rgba(0, 0, 0, .8) inset;
+        display: block;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
         text-align: center;
+        border: 1px solid hsl(0, 0%, 10%);
+        border-radius: 9px;
     }
 
     #nav-tab li {
-        display: inline;
+        display: table-cell;
     }
 
     #nav-tab a {
+        border-right: 1px solid hsl(0, 0%, 10%);
         color: inherit;
-        border-radius: 10px;
         display: inline-block;
-        font-size: 22px;
+        font-size: 28px;
         font-weight: bold;
-        margin: 0 1%;
-        padding: 8px 0;
+        line-height: 1.6em;
+        margin: 0;
+        padding: 0 .3em;
         text-decoration: none;
-        width: 18%;
     }
 
+        #nav-tab a:hover {
+            background-color: hsla(25, 100%, 75%, .4);
+        }
+
+    #nav-tab li:last-child a {
+        border-right: none;
+    }
+
+    #nav-tab .current {
+        background: radial-gradient(closest-side, hsla(25, 100%, 75%, .2), hsla(0, 0%, 100%, 0)),hsl(0, 0%, 20%);
+        box-shadow: 0 0 32px 4px rgba(0, 0, 0, .4);
+        color: hsl(25, 100%, 50%);
+    }
+/* #endregion */
+
+#page-body {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+/* #region page-body */
 .form-box {
-    padding: 0 20px 20px;
+    font-weight: bold;
+    margin: 20px;
 }
 
     .form-box h2 {
-        margin: 0;
-        padding: 0;
-        font-size: 24px;
+        display: none;
     }
 
     .form-box p {
-        margin: .4em 0;
         font-size: 22px;
+        margin: 10px 0;
     }
 
 #form-input h3 {
@@ -195,13 +216,14 @@ body {
 
 #input-slider {
     float: left;
+    transition: all .4s ease;
     width: 50%;
 }
 
     #input-slider input[type='range'] {
-        width: 100%;
         margin: 1em 0 0;
         padding: 0;
+        width: 100%;
     }
 
     #input-slider fieldset {
@@ -209,151 +231,124 @@ body {
     }
 
 #input-picker {
-    float: right;
-    width: 50%;
     display: none; /* pref */
+    float: right;
+    transition: all .4s ease;
+    width: 50%;
 }
-
-/*#input-submit {
-    float: left;
-    width: 100%;
-}
-
-#input-submit button {
-    width: 100%;
-    line-height: 1.4;
-    font-size: 32px;
-}*/
-/* END page-body-inner */
-/* page-body-theme */
+/* #endregion */
+/* #region page-body-theme */
 .theme-light {
     color: #222;
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
 }
 
-    /*.theme-light #layer-bgcolor { debug
-        background: #fff;
-    }*/
-
-    .theme-light #nav-tab .current {
-        box-shadow: none;
-        background: transparent;
-    }
-
-    .theme-light #nav-tab a {
-        background: rgba(0, 0, 0, .04);
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, .5) inset;
-        text-shadow: 1px 1px 1px rgba(255, 255, 255, .5);
-    }
-
-        .theme-light #nav-tab a:hover, .theme-light #nav-tab a:focus {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .2));
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, .5);
-        }
-
-        .theme-light #nav-tab a:active {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .2));
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, .5) inset;
-        }
-
 .theme-dark {
     color: #fafafa;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
-
-    /*.theme-dark #layer-bgcolor { debug
-        background: #000;
-    }*/
-
-    .theme-dark #nav-tab .current {
-        box-shadow: none;
-        background: transparent;
-    }
-
-    .theme-dark #nav-tab a {
-        background: rgba(255, 255, 255, .04);
-        box-shadow: 0px 0px 8px rgba(255, 255, 255, .5) inset;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
-    }
-
-        .theme-dark #nav-tab a:hover, .theme-dark #nav-tab a:focus {
-            background: linear-gradient(to bottom, rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
-            box-shadow: 0px 0px 8px rgba(255, 255, 255, 1);
-        }
-
-        .theme-dark #nav-tab a:active {
-            background: linear-gradient(to bottom, rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
-            box-shadow: 0px 0px 8px rgba(255, 255, 255, .5) inset;
-        }
-/* ENDpage-body-theme */
+/* #endregion */
 
 #page-foot {
     background: #333;
-    border-left: 1px solid rgba(0, 0, 0, .5);
-    border-right: 1px solid rgba(0, 0, 0, .5);
     border-top: 1px solid rgba(0, 0, 0, .5);
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, .5);
     color: #fafafa;
     font-family: 'Titillium Web', Arial, Meiryo, "Hiragino Maru Gothic ProN", "MS PGothic", Osaka, sans-serif;
-    line-height: 1;
-    padding: 20px;
+    padding: 20px 0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+/* #region page-foot */
+#page-foot-inner {
+    margin: 0 auto;
+    max-width: 1060px;
+    padding: 0 20px;
+}
 
-    #page-foot a {
-        color: inherit;
-        text-decoration: underline;
+#page-foot a {
+    color: inherit;
+    text-decoration: underline;
+    transition: all .4s ease;
+}
+
+    #page-foot a:hover, #page-foot a:focus {
+        color: hsl(25, 100%, 50%);
+        background: radial-gradient(closest-side, hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, 0));
+        text-decoration: none;
     }
 
-        #page-foot a:hover, #page-foot a:focus {
-            color: #ff6d00;
-            background: radial-gradient(closest-side, rgba(255, 255, 255, .2), rgba(255, 255, 255, 0));
-            text-decoration: none;
-        }
+    #page-foot a:active {
+        color: hsl(25, 100%, 50%);
+        background: radial-gradient(closest-side, hsla(25, 100%, 75%, .2), hsla(0, 0%, 100%, 0));
+        text-decoration: none;
+    }
 
 #nav {
-    float: left;
+    text-transform: lowercase;
 }
 
 #verInf {
     color: #999;
-    float: right;
     font-size: 14px;
 }
 
-#copy {
+#copy small {
+    font-size: 14px;
     margin: 1em 0 0;
 }
+/* #endregion */
 
-    #copy small {
-        font-size: 14px;
-    }
-
-@media (max-width: 1000px) {
-    #page {
-        width: 100%;
-        min-width: 640px;
-    }
-
-    #page-head {
-        border-left: none;
+@media (max-width: 1100px) {
+    #page-head-inner {
         border-bottom-left-radius: 0;
-    }
-
-    #page-body, #layer-bgcolor, #page-foot {
         border-left: none;
-        border-radius: 0;
-        border-right: none;
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 720px) {
     #page {
-        width: 100%;
         min-width: 480px;
     }
+
+    #page-head-inner {
+        border-right: none;
+        border-bottom-right-radius: 0;
+        display: block;
+        padding: 12px 0;
+    }
+
+        #page-head-inner h1 {
+            display: block;
+            margin: 0 20px;
+        }
+
+/* #region page-head-nav */
+    #nav-tab {
+        display: block;
+        padding: 1em 0 0;
+    }
+
+        #nav-tab ul {
+            border-left: none;
+            border-radius: 0;
+            border-right: none;
+        }
+
+        #nav-tab li {
+            display: block;
+        }
+
+        #nav-tab a {
+            border-bottom: 1px solid hsl(0, 0%, 10%);
+            border-right: none;
+            display: block;
+            line-height: 1.8;
+        }
+
+        #nav-tab li:last-child a {
+            border-bottom: none;
+        }
+/* #endregion */
 
     #input-slider {
         float: none;
@@ -363,5 +358,9 @@ body {
     #input-picker {
         float: none;
         width: 100%;
+    }
+
+    #nav {
+        font-size: 28px;
     }
 }
