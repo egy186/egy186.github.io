@@ -1,0 +1,14 @@
+{
+  "name": "egy186.github.io",
+  "homepage": "https://egy186.github.io",
+  "authors": [
+    "egy186"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "fullpage": "~2.4.3",
+    "bootstrap": "~3.3.0",
+    "jquery": "~2.1.1"
+  }
+}

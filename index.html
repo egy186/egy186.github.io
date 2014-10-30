@@ -1,24 +1,55 @@
----
-layout: default
-title: egy186's Blog
----
-{% for post in site.posts limit:5 %}
-<article class="page-body article">
-    <header>
-        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-        <p><time datetime="{{ post.date | date: "%Y-%m-%d T %H:%M %z" }}">{{ post.date | date_to_string }}</time></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>egy186.github.io</title>
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
+  <meta name="author" content="egy186" />
+  <meta name="viewport" content="width=device-width" />
+  <script src="lib/jquery/dist/jquery.min.js" defer></script>
+  <script src="lib/fullpage/jquery.fullPage.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: { families: ['Open+Sans:400,300:latin'] }
+    };
+    (function () {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="lib/fullpage/jquery.fullPage.css" />
+  <link rel="stylesheet" href="css/common.css" />
+  <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+</head>
+<body>
+  <div id="page">
+    <header class="section text-center">
+      <h1>egy186.github.io</h1>
+      <p class="lead"><span>Tofu</span> is not <span>Tough</span>.</p>
     </header>
-    {{ post.content }}
-    <footer>
-        <p>Tags: {{ post.tags | array_to_sentence_string }}</p>
+    <section class="section text-center">
+      <h1><a href="/colorconverter">Color Converter</a></h1>
+      <p class="lead">Convert colorcode easily.</p>
+    </section>
+    <section class="section text-center">
+      <h1><a href="/ico.js">ico.js</a></h1>
+      <p class="lead">JavaScript library to use <code>ICO</code> file.</p>
+    </section>
+    <footer class="section text-center">
+      <ul class="row lead">
+        <li class="col-sm-6"><a target="_blank" href="https://github.com/egy186"><img src="img/egy186.png" alt="egy186" />github.com/egy186</a></li>
+        <li class="col-sm-6"><a target="_blank" href="https://twitter.com/egp186"><img src="img/egp186.png" alt="egp186" />twitter.com/egp186</a></li>
+      </ul>
+      <p class="lead"><small>Copyright (c) 2013-2014 egy186.github.io All Rights Reserved.</small></p>
     </footer>
-</article>
-{% endfor %}
-<section class="page-body">
-    <h1>Other Posts</h1>
-    <ul class="posts">
-        {% for post in site.posts limit:5 offset:1 %}
-        <li><time>{{ post.date | date_to_string }}</time> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-</section>
+  </div>
+</body>
+</html>

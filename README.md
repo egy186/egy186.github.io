@@ -1,15 +1,7 @@
-﻿# [egy186.github.io](http://egy186.github.io)
+# egy186.github.io
 
-egy186のブログができるんですか？
+[egy186.github.io](http://egy186.github.io)
 
-## styleについて
-
-同じくGitHubに上げる（予定の）僕が作ったスタイルシートを使っているはずです
-
-## ひとりごと
-
-ひーまな時だけ更新
-
-## 連絡先
+## contact
 
 Twitter [@egp186](http://twitter.com/egp186)
