@@ -12,7 +12,8 @@ jQuery().ready(function () {
     css3: true,
     continuousVertical: true,
     resize: false,
-    sectionsColor: ['#9ff', '#fff', '#fff', '#9f9']
+    sectionsColor: ['#9ff', '#fff', '#fff', '#9f9'],
+    recordHistory: false
     //events
     //onLeave: function (index, nextIndex, direction) { },
     //afterLoad: function (anchorLink, index) { },
@@ -21,4 +22,4 @@ jQuery().ready(function () {
     //afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) { },
     //onSlideLeave: function (anchorLink, index, slideIndex, direction) { }
   });
-})
+});
