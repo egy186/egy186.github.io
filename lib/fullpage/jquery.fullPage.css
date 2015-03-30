@@ -1,5 +1,5 @@
 /**
- * fullPage 2.1.9
+ * fullPage 2.6.0
  * https://github.com/alvarotrigo/fullPage.js
  * MIT licensed
  *
@@ -46,6 +46,7 @@ html, body {
 }
 .fp-section.fp-table, .fp-slide.fp-table {
     display: table;
+    table-layout:fixed;
     width: 100%;
 }
 .fp-tableCell {
@@ -67,6 +68,9 @@ html, body {
     height: 0;
     border-style: solid;
     margin-top: -38px;
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 .fp-controlArrow.fp-prev {
     left: 15px;
@@ -81,7 +85,6 @@ html, body {
 }
 .fp-scrollable {
     overflow: scroll;
-
 }
 .fp-notransition {
     -webkit-transition: none !important;
@@ -93,6 +96,7 @@ html, body {
     margin-top: -32px;
     top: 50%;
     opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
 }
 #fp-nav.right {
     right: 17px;
@@ -117,19 +121,19 @@ html, body {
   margin: 0;
   padding: 0;
 }
-#fp-nav li,
-.fp-slidesNav li {
+#fp-nav ul li,
+.fp-slidesNav ul li {
     display: block;
     width: 14px;
     height: 13px;
     margin: 7px;
     position:relative;
 }
-.fp-slidesNav li {
+.fp-slidesNav ul li {
     display: inline-block;
 }
-#fp-nav li a,
-.fp-slidesNav li a {
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
     display: block;
     position: relative;
     z-index: 1;
@@ -138,23 +142,39 @@ html, body {
     cursor: pointer;
     text-decoration: none;
 }
-#fp-nav li .active span,
-.fp-slidesNav .active span {
-    background: #333;
-}
-#fp-nav span,
-.fp-slidesNav span {
-    top: 2px;
-    left: 2px;
-    width: 8px;
-    height: 8px;
-    border: 1px solid #000;
-    background: rgba(0, 0, 0, 0);
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 12px;
+    width: 12px;
+    margin: -6px 0 0 -6px;
+    border-radius: 100%;
+ }
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
     border-radius: 50%;
     position: absolute;
     z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #333;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
-.fp-tooltip {
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span{
+    width: 10px;
+    height: 10px;
+    margin: -5px 0px 0px -5px;
+}
+#fp-nav ul li .fp-tooltip {
     position: absolute;
     top: -2px;
     color: #fff;
@@ -162,10 +182,21 @@ html, body {
     font-family: arial, helvetica, sans-serif;
     white-space: nowrap;
     max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
 }
-.fp-tooltip.right {
+#fp-nav ul li:hover .fp-tooltip,
+#fp-nav.fp-show-active a.active + .fp-tooltip {
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    width: auto;
+    opacity: 1;
+}
+#fp-nav ul li .fp-tooltip.right {
     right: 20px;
 }
-.fp-tooltip.left {
+#fp-nav ul li .fp-tooltip.left {
     left: 20px;
 }

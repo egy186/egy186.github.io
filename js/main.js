@@ -14,12 +14,5 @@ jQuery().ready(function () {
     resize: false,
     sectionsColor: ['#9ff', '#fff', '#fff', '#9f9'],
     recordHistory: false
-    //events
-    //onLeave: function (index, nextIndex, direction) { },
-    //afterLoad: function (anchorLink, index) { },
-    //afterRender: function () { },
-    //afterResize: function () { },
-    //afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) { },
-    //onSlideLeave: function (anchorLink, index, slideIndex, direction) { }
   });
 });

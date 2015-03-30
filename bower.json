@@ -7,9 +7,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "fullpage": "~2.4.3",
-    "bootstrap": "~3.3.0",
-    "jquery": "~2.1.1"
+    "fullpage": "~2.6.2",
+    "bootstrap": "~3.3.4"
   },
   "overrides": {
     "jquery.slimscroll": {
